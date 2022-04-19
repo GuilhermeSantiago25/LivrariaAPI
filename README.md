@@ -1,4 +1,5 @@
-# Sobre o projeto :man_technologist:
+# Desenvolvimento de API REST em NodeJS
+## Sobre o projeto :man_technologist:
 O Projeto Final de Módulo 4 da Resilia consiste no desenvolvimento de uma API para uma Livraria. Nesse processo é obrigatório:
 - Padrão MVC
 - Verbos HTTP seguindo o padrão REST
