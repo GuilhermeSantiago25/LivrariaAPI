@@ -1,0 +1,33 @@
+{
+  "name": "livrariaapi",
+  "version": "1.0.0",
+  "description": "Iniciando o Projeto Final de Módulo 4",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NiltonCortesJr/LivrariaAPI.git"
+  },
+  "keywords": [
+    "Projeto final de módulo 4",
+    "Resilia Educação"
+  ],
+  "author": "NiltonCortesJr",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/NiltonCortesJr/LivrariaAPI/issues"
+  },
+  "homepage": "https://github.com/NiltonCortesJr/LivrariaAPI#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
