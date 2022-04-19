@@ -32,7 +32,7 @@ As rotas a serem desenvolvidas para as entidades são:
 ## Autoria
 :woman_technologist: [Izadora Ferreira dos Santos](https://www.linkedin.com/in/izadora-ferreira-dos-santos-0504b2177/)
 
-:man_technologist: [Josí Camara Etchichury Filho](https://www.linkedin.com/in/jos%C3%A9-camara-etchichury-filho-95190a125/)
+:man_technologist: [José Camara Etchichury Filho](https://www.linkedin.com/in/jos%C3%A9-camara-etchichury-filho-95190a125/)
 
 :man_technologist: [Vitor Luiz da Silva Del Duca](https://www.linkedin.com/in/vitor-del-duca-gestao-programacao-treinamento/)
 
