@@ -1,6 +1,6 @@
 import express from "express";
 import * as dotenv from "dotenv";
-import Usuarios from "./src/controllers/Usuarios.js"
+import Informatica from "./src/controllers/Informatica.js"
 import cors from "cors"
 
 
