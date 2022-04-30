@@ -24,8 +24,27 @@ As rotas a serem desenvolvidas para as entidades são:
 - Metodologia ágil Kanban (Trello)
 
 ## Dependências necessárias :page_with_curl:
+ As dependências para a execução da aplicação estão listadas [aqui](https://github.com/NiltonCortesJr/LivrariaAPI/blob/main/package.json)
+```
+"dependencies": {
+    "axios": "^0.26.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "path": "^0.12.7",
+    "sqlite": "^4.1.1",
+    "sqlite3": "^5.0.6"
+  }
+```
 
 ## Dependências de desenvolvimento :chart_with_upwards_trend:
+As dependências necessárias para o ambiente de desenvolvimento da aplicação estão listadas [aqui](https://github.com/NiltonCortesJr/LivrariaAPI/blob/main/package.json)
+```
+"devDependencies": {
+    "jest": "^28.0.3",
+    "nodemon": "^2.0.16"
+  }
+```
 
 ## Inicialização da aplicação via terminal :arrow_forward:
 
