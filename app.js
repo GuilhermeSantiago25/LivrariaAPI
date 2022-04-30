@@ -1,6 +1,6 @@
 import express from "express";
 import * as dotenv from "dotenv";
-import Informatica from "./src/controllers/Informatica.js"
+import Papelaria from "./src/controllers/papelaria.js";
 import cors from "cors"
 
 
@@ -17,4 +17,4 @@ app.listen(port, ()=>{
 })
 
 
-Usuarios.routers(app)
+Papelaria.routers(app)
