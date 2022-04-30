@@ -1,6 +1,7 @@
 import express from "express";
 import * as dotenv from "dotenv";
-import Informatica from "./src/controllers/Informatica.js"
+import Informatica from "./src/controllers/Informatica.js";
+import Livros from "./src/controllers/Livros.js";
 import cors from "cors"
 
 
