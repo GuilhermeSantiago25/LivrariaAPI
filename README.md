@@ -14,7 +14,7 @@ As rotas a serem desenvolvidas para as entidades são:
 - Deleção de um registro
 
 ## Status do projeto :white_check_mark:
-![progress](https://progress-bar.dev/2/ "progresso")
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 ## Tecnologias utilizadas :computer:
 - NodeJS
