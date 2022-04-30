@@ -13,7 +13,7 @@ app.use(cors())
 app.use(express.json())
 
 app.listen(port, ()=>{
-    console.log(`Servidor em http://localhost:${port}`)
+    console.log(`Sucesso na Conexão ao Servidor em: http://localhost:${port}`)
 })
 
 
