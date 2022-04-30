@@ -21,7 +21,7 @@ class DatabaseMetodos{
             produto VARCHAR,
             marca VARCHAR,
             caracteristicas VARCHAR,
-            valor SMALLMONEY,
+            valor FLOAT
         )
         `
 

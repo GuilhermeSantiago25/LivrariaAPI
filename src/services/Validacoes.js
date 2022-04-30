@@ -4,7 +4,7 @@ class Validacoes{
      * @param {string} string 
      * @returns boolean
      */
-    static validaProduto(string){
+    static validaNome(string){
         if(string.length >= 1){
             return true
         } else {
