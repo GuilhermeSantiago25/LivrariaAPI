@@ -19,5 +19,7 @@ app.listen(port, ()=>{
     console.log(`Sucesso na Conexão ao Servidor em: http://localhost:${port}`)
 })
 
-
+Livros.routers(app)
+Clientes.routers(app)
+Informatica.routers(app)
 Papelaria.routers(app)
