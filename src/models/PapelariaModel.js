@@ -1,11 +1,10 @@
 class PapelariaModel{
-    constructor(id, produto, marca, caracteristica, valor){
+    constructor(id, nome, marca, caracteristica, valor){
         this.id = id
-        this.produto = produto
+        this.nome = nome
         this.marca = marca
         this.caracteristica = caracteristica
         this.valor = valor
-
     }
 }
 

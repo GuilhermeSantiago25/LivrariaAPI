@@ -1,6 +1,6 @@
 class Validacoes{
     /**
-     * 
+     * git 
      * @param {string} string 
      * @returns boolean
      */
@@ -18,6 +18,7 @@ class Validacoes{
             return false
         }
     }
+    
 }
 
 export default Validacoes;

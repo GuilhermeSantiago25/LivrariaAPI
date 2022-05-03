@@ -1,6 +1,6 @@
 import Database from "../infra/Database.js"
 
-class DatabaseMetodos{
+class DBMPapelaria{
     static activePragma(){
         const pragma = "PRAGMA foreing_keys = ON"
         Database.run(pragma, (e) => {
@@ -18,7 +18,7 @@ class DatabaseMetodos{
         const tabela_papelaria = `
         CREATE TABLE IF NOT EXISTS papelaria (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            produto VARCHAR,
+            nome VARCHAR,
             marca VARCHAR,
             caracteristicas VARCHAR,
             valor FLOAT
@@ -30,7 +30,7 @@ class DatabaseMetodos{
                 if(e){
                     reject(e.message)
                 } else {
-                    resolve("Tabela papelaria criada com sucesso")
+                    resolve("Produtos inseridos com sucesso!")
                 }
             })
         })
@@ -49,7 +49,7 @@ class DatabaseMetodos{
                 if (e) {
                     reject(e) 
                 } else { 
-                    resolve({ message: "Item criado com sucesso" }) 
+                    resolve({ message: "Item(ns) criado(s) com sucesso" }) 
                 }
             })
         })
@@ -106,4 +106,4 @@ class DatabaseMetodos{
     }
 }
 
-export default DatabaseMetodos
+export default DBMPapelaria
