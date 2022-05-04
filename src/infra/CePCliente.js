@@ -5,12 +5,12 @@ try {
     console.log(table)
     await DBMClientes.incluir(
         { 
-            id: 3,
-            nome:"Sandra Lopes Gomes", 
-            email:"sandra@email.com.br",
-            cpf: 23456789012,
-            telefone: 23998765432,
-            endereco: "Avenida Brasil, 1234, 301, Caju, Rio de Janeiro, Rio de Janeiro, 20930040"
+            id: 5,
+            nome:"Luiz Castro Bianchi", 
+            email:"lcastro@email.com.br",
+            cpf: 78901234589,
+            telefone: 28999114343,
+            endereco: "Avenida Simoes Soares, 935, Barra do Itapemirim, Marataízes, Espirito Santo, 29345000"
         })    
 } catch (e) {
     console.log(e.message)
