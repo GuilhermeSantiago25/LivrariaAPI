@@ -5,14 +5,14 @@ class Validacoes{
      * @returns boolean
      */
     static validaNome(string){
-        if(string.length >= 1){
+        if(string.length >= 3){
             return true
         } else {
             return false
         }
     }
     static validaValor(valor){
-        if(valor.length >= 0.1){
+        if(valor >= 0.1){
             return true
         } else {
             return false

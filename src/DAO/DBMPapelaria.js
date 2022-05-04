@@ -7,7 +7,7 @@ class DBMPapelaria{
             if(e){
                 console.log(e)
             } else {
-                console.log("Chaves estrangeiras ativas.")
+                console.log("Chaves estrangeiras configuradas.")
             }
         })
     }
@@ -18,7 +18,7 @@ class DBMPapelaria{
         const tabela_papelaria = `
         CREATE TABLE IF NOT EXISTS papelaria (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            nome VARCHAR,
+            produto VARCHAR,
             marca VARCHAR,
             caracteristicas VARCHAR,
             valor FLOAT
@@ -78,16 +78,16 @@ class DBMPapelaria{
             } )
         })
     }
-    static atualizaPorId(usuario, id){
+    static atualizaPorId(Papelaria, id){
         const query = `
         UPDATE papelaria SET (id, produto, marca, caracteristicas, valor) = (?,?,?,?,?) WHERE id = ?
         `
         return new Promise((resolve, reject) => {
-            Database.run(query, [...usuario, id], (e, result) => {
+            Database.run(query, [...Object.values(Papelaria), id], (e, result) => {
                 if(e){
                     reject(e.message)
                 } else {
-                    resolve(result)
+                    resolve(`id ${id} foi atualizado com sucesso`)
                 }
             })
         })
@@ -99,7 +99,7 @@ class DBMPapelaria{
                 if (e){
                     reject(e.message)
                 } else {
-                    resolve({error: false, idDeletado: id})
+                    resolve(`id ${id} deletado com sucesso`)
                 }
             })
         })
