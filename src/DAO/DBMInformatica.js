@@ -7,7 +7,7 @@ class DBMInformatica{
             if(e){
                 console.log(e)
             } else {
-                console.log("Chaves estrangeiras, ativas.")
+                console.log("Chaves estrangeiras configuradas.")
             }
         })
     }
@@ -72,16 +72,18 @@ class DBMInformatica{
             } )
         })
     }
+
+    // UPDATE Informatica SET id = ?, produto = ?, marca =?, especificacao =?, valor = ? WHERE id = ?
     static atualizaPorId(Informatica, id){
         const query = `
-        UPDATE Informatica SET (id, produto, marca, Especificacao, valor) = (?,?,?,?,?) WHERE id = ?
+        UPDATE Informatica SET (id, produto, marca, especificacao, valor) = (?,?,?,?,?) WHERE id = ?
         `
         return new Promise((resolve, reject) => {
-            Database.run(query, [...Informatica, id], (e, result) => {
+            Database.run(query, [...Object.values(Informatica), id], (e, result) => {
                 if(e){
                     reject(e.message)
                 } else {
-                    resolve(result)
+                    resolve(`id ${id} foi atualizado com sucesso`)
                 }
             })
         })
@@ -93,7 +95,7 @@ class DBMInformatica{
                 if (e){
                     reject(e.message)
                 } else {
-                    resolve({error: false, idDeletado: id})
+                    resolve({idDeletado: id})
                 }
             })
         })

@@ -1,4 +1,4 @@
-class InformaticaModel{
+class InformaticaModels{
     constructor(id, produto, marca, Especificacao, valor){
         this.id = id
         this.produto = produto
@@ -8,4 +8,4 @@ class InformaticaModel{
     }
 }
 
-export default InformaticaModel
+export default InformaticaModels
