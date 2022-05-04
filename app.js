@@ -24,7 +24,7 @@ app.use(express.json())
 
 app.listen(port, ()=>{
     console.log(`Sucesso na Conexão ao Servidor em: http://localhost:${port}`)
-
+})
 DBMClientes.createTable();
 DBMInformatica.createTable();
 DBMLivros.createTable();
