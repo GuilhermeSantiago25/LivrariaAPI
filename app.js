@@ -12,7 +12,6 @@ import DBMInformatica from "./src/DAO/DBMInformatica.js";
 import DBMLivros from "./src/DAO/DBMLivros.js";
 import DBMPapelaria from "./src/DAO/DBMPapelaria.js";
 
-
 dotenv.config()
 
 const app = express()
@@ -29,6 +28,11 @@ DBMPapelaria.createTable();
 app.listen(port, ()=>{
     console.log(`Servidor em http://localhost:${port}`)
 })
+
+https.createServer({
+    cert: fs.readFileSync("src/utils/code.crt"),
+    key: fs.readFileSync("src/utils/code.key")
+}, app).listen(3003, () => console.log("Servidor rodando também em https://localhost:3003"))
 
 Clientes.routers(app);
 Informatica.routers(app);
