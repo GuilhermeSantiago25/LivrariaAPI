@@ -1,23 +1,48 @@
-ID: 1
-produto: "Mouse Gamer Cobra"
-Marca: "Redragon"
-especificação: "Chroma RGB, 12400DPI, 7 Botões, Preto - M711 V2"
-valor: 119,99
+import DBMInformatica from "../DAO/DBMInformatica.js"
+import InformaticaModels from "../models/InformaticaModels.js"
+import Validacoes from "../services/Validacoes.js"
 
-ID: 2
-produto: "Teclado Mecanico DARK AVENGER"
-Marca: "Redragon"
-especificação: "RGB, USB, SWITCH VERMELHO, K568RGB-2 RED"
-valor: 289,99
+class Informatica{
+    static routers(app){
+        
+        app.get("/Informatica", async (req, res) =>{
+            const response = await DBMInformatica.listarTodos()
+            res.status(200).json(response)
+        })
+        app.get("/Informatica/:id", async (req, res) =>{
+            const selectOne = await DBMInformatica.listaPorId(req.body.id)
+            res.status(200).json(selectOne)
+        })
+        app.put("/Informatica/:id", async (req, res) =>{
+            try {                
+                if(Validacoes.validaNome(req.body.produto) && Validacoes.validaValor(req.body.valor)){
+                    const attID = await DBMInformatica.atualizaPorId(req.body, req.body.id)
+                    res.status(200).json(attID)
+                } else {
+                    throw new Error("Requisição fora dos padrões, favor rever.")
+                }
+            } catch (e) {
+                res.status(400).json({erro: e.message})
+            }
+        })
+        app.post("/Informatica", async(req, res) => {
+            try {                
+                if(Validacoes.validaNome(req.body.produto) && Validacoes.validaValor(req.body.valor)){
+                    const Informatica = new InformaticaModels(...Object.values(req.body))
+                    const response = await DBMInformatica.popular(Informatica)  
+                    res.status(201).json(response)
+                } else {
+                    throw new Error("Requisição fora dos padrões, favor rever.")
+                }
+            } catch (e) {
+                res.status(400).json({erro: e.message})
+            }
+        })
+        app.delete('/Informatica/:id', async (req, res) => {
+            let deleteUma = await DBMInformatica.deletaPorId(req.body.id)
+            res.status(200).json(deleteUma)
+        })
+    }
+}
 
-ID: 3
-produto: "Headset Gamer Zeus X "
-Marca: "Redragon"
-especificação: "RGB, USB, 7.1 Surround Sound Virtual H510-RGB, Preto"
-valor: 349,99
-
-ID: 4
-produto: "Mousepad Gamer Suzaku"
-Marca: "Redragon"
-especificação: "Preto e Vermelho, 800x300mm,"
-valor: 99,99
+export default Informatica
