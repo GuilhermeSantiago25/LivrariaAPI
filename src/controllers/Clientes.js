@@ -22,17 +22,29 @@ class Clientes{
                     const response = await DBMClientes.incluir(cliente)
                     res.status(201).json(response)
                 } else {
-                    throw new Error("Requisição fora do padrões, favor verificar.")
+                    throw new Error("Requisição fora do padrão, favor verificar.")
                 }
             } catch (e) {
                 res.status(400).json({erro: e.message})
             }
         })
 
-        app.put('/clientes/id', async (req, res)=> {
-            const updateCliente = await DBMClientes.atualizaPorId(req.body, req.body.id )
-            res.status(200).json(updateCliente);
-            });
+        app.put('/clientes/:id', async(req, res) => {
+            try {                
+                if(Validacoes.validaNome(req.body.nome)){
+                    const updateCliente = await DBMClientes.atualizaPorId(req.body, req.body.id)
+                    res.status(200).json(updateCliente);
+                }else {
+                    throw new Error("Requisição fora dos padrões, favor rever.")
+                }
+            } catch (e) {
+                res.status(400).json({erro: e.message})
+            }
+        });
+        // app.put('/clientes/id', async (req, res)=> {
+        //     const updateCliente = await DBMClientes.atualizaPorId(req.body, req.body.id )
+        //     res.status(200).json(updateCliente);
+        //     });
         
         app.delete('/clientes', async (req, res) => {
             let deleteUma = await DBMClientes.deletaPorId(req.body.id)

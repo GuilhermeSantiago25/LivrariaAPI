@@ -94,7 +94,7 @@ class DBMClientes{
                 if(e){
                     reject(e.message)
                 } else {
-                    resolve({ message: "Alteração realizada com sucesso." })
+                    resolve(`Id ${id} foi atualizado com sucesso.`)
                 }
             })
         })
@@ -107,7 +107,7 @@ class DBMClientes{
                 if (e){
                     reject(e.message)
                 } else {
-                    resolve({idDeletado: id})
+                    resolve(`Id ${id} deletado com sucesso.`)
                 }
             })
         })
