@@ -7,7 +7,7 @@ class DBMInformatica{
             if(e){
                 console.log(e)
             } else {
-                console.log("Chaves estrangeiras configuradas.")
+                console.log("Chaves estrangeiras Informatica configuradas.")
             }
         })
     }
