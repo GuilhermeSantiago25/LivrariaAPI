@@ -57,6 +57,33 @@ class DBMClientes{
         })
     }
 
+    
+    static listarTodos(){
+        const query = "SELECT * FROM clientes"
+        return new Promise ((resolve, reject) => {
+            Database.all(query, (e, rows)=>{
+                if(e){
+                    reject(e.message)
+                } else {
+                    resolve({rows:rows})
+                }
+            })
+        })
+    }
+    
+    static listaPorId(id){
+        const query = "SELECT * FROM clientes WHERE id = ?"
+        return new Promise ((resolve, reject) => {
+            Database.get(query, id, (e, result)=>{
+                if(e){
+                    reject(e.message)
+                } else {
+                    resolve(result)
+                }
+            } )
+        })
+    }
+    
     static atualizaPorId(clientes, id){
         const query = `
         UPDATE clientes SET (id, nome, email, cpf, telefone, endereco) = (?, ?, ?, ?, ?, ?) WHERE id = ?
@@ -72,33 +99,7 @@ class DBMClientes{
             })
         })
     }
-
-    static listarTodos(){
-        const query = "SELECT * FROM clientes"
-        return new Promise ((resolve, reject) => {
-            Database.all(query, (e, rows)=>{
-                if(e){
-                    reject(e.message)
-                } else {
-                    resolve({rows:rows})
-                }
-            })
-        })
-    }
-
-    static listaPorId(id){
-        const query = "SELECT * FROM clientes WHERE id = ?"
-        return new Promise ((resolve, reject) => {
-            Database.get(query, id, (e, result)=>{
-                if(e){
-                    reject(e.message)
-                } else {
-                    resolve(result)
-                }
-            } )
-        })
-    }
-
+    
     static deletaPorId(id){
         const query = "DELETE FROM clientes WHERE id = ?"
         return new Promise ((resolve, reject) => {
