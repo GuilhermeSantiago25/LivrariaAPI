@@ -41,10 +41,6 @@ class Clientes{
                 res.status(400).json({erro: e.message})
             }
         });
-        // app.put('/clientes/id', async (req, res)=> {
-        //     const updateCliente = await DBMClientes.atualizaPorId(req.body, req.body.id )
-        //     res.status(200).json(updateCliente);
-        //     });
         
         app.delete('/clientes', async (req, res) => {
             let deleteUma = await DBMClientes.deletaPorId(req.body.id)
