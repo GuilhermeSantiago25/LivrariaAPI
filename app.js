@@ -1,8 +1,6 @@
 import express from "express";
 import * as dotenv from "dotenv";
 import cors from "cors";
-import https from "https";
-import fs from "fs";
 
 import Clientes from "./src/controllers/Clientes.js";
 import Informatica from "./src/controllers/Informatica.js";
@@ -30,11 +28,6 @@ DBMClientes.createTable();
 DBMInformatica.createTable();
 DBMLivros.createTable();
 DBMPapelaria.createTable();
-
-https.createServer({
-    cert: fs.readFileSync("src/utils/code.crt"),
-    key: fs.readFileSync("src/utils/code.key")
-}, app).listen(3003, () => console.log("Servidor rodando também em https://localhost:3003"))
 
 Clientes.routers(app);
 Informatica.routers(app);

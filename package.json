@@ -4,7 +4,7 @@
   "description": "Iniciando o Projeto Final de Módulo 4",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "start": "node app.js"
   },
   "repository": {
