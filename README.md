@@ -14,7 +14,7 @@ As rotas a serem desenvolvidas para as entidades são:
 - Deleção de um registro
 
 ## Status do projeto :white_check_mark:
-![progress](https://progress-bar.dev/2/ "progresso")
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 ## Tecnologias utilizadas :computer:
 - NodeJS
@@ -24,8 +24,27 @@ As rotas a serem desenvolvidas para as entidades são:
 - Metodologia ágil Kanban (Trello)
 
 ## Dependências necessárias :page_with_curl:
+ As dependências para a execução da aplicação estão listadas [aqui](https://github.com/NiltonCortesJr/LivrariaAPI/blob/main/package.json)
+```
+"dependencies": {
+    "axios": "^0.26.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "path": "^0.12.7",
+    "sqlite": "^4.1.1",
+    "sqlite3": "^5.0.6"
+  }
+```
 
 ## Dependências de desenvolvimento :chart_with_upwards_trend:
+As dependências necessárias para o ambiente de desenvolvimento da aplicação estão listadas [aqui](https://github.com/NiltonCortesJr/LivrariaAPI/blob/main/package.json)
+```
+"devDependencies": {
+    "jest": "^28.0.3",
+    "nodemon": "^2.0.16"
+  }
+```
 
 ## Inicialização da aplicação via terminal :arrow_forward:
 
