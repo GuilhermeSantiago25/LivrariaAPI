@@ -15,30 +15,12 @@ class Clientes{
             res.status(200).json(selecionarUm)
         })
 
-        // app.post("/clientes", async(req, res) => {
-        //     try {                
-        //         if(Validacoes.validaNome(req.body.nome) && Validacoes.validaCPF(req.body.cpf), Validacoes.validaTelefone(req.body.telefone)){
-        //             const cliente = new ClientesModel(...Object.values(req.body))
-        //             const response = await DBMClientes.incluir(cliente)
-        //             res.status(201).json(response)
-        //         } else {
-        //             throw new Error("Requisição fora do padrões, favor verificar.")
-        //         }
-        //     } catch (e) {
-        //         res.status(400).json({erro: e.message})
-        //     }
-        // })
-
         app.post("/clientes", async(req, res) => {
             try {                
-                if(Validacoes.validaNome(req.body.nome)) {
-                    if(Validacoes.validaCPF(req.body.cpf)) {
-                        if(Validacoes.validaTelefone(req.body.telefone)) {                        
-                            const cliente = new ClientesModel(...Object.values(req.body))
-                            const response = await DBMClientes.incluir(cliente)
-                            res.status(201).json(response)
-                        }   
-                    }   
+                if(Validacoes.validaNome(req.body.nome)){
+                    const cliente = new ClientesModel(...Object.values(req.body))
+                    const response = await DBMClientes.incluir(cliente)
+                    res.status(201).json(response)
                 } else {
                     throw new Error("Requisição fora do padrões, favor verificar.")
                 }
