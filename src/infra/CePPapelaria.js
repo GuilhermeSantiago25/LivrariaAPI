@@ -1,4 +1,6 @@
 import DBMPapelaria from "../DAO/DBMPapelaria.js";
+import Validacoes from "../services/Validacoes.js";
+
 
 try {
     const table = await DBMPapelaria.createTable()
@@ -38,7 +40,6 @@ try {
             caracteristica: "pasta em L",
             valor: 3.80,
         })
-
-    } catch (e) {
-        console.log(e.message)
-    }
+} catch (e) {
+    console.log(e.message)
+}

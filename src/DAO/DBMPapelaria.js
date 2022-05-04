@@ -83,11 +83,11 @@ class DBMPapelaria{
         UPDATE papelaria SET (id, produto, marca, caracteristicas, valor) = (?,?,?,?,?) WHERE id = ?
         `
         return new Promise((resolve, reject) => {
-            Database.run(query, [...Object.values(Papelaria), id], (e, result) => {
+            Database.run(query, [...Object.values(Papelaria), id], (e) => {
                 if(e){
                     reject(e.message)
                 } else {
-                    resolve(`id ${id} foi atualizado com sucesso`)
+                    resolve(`Id ${id} foi atualizado com sucesso!`)
                 }
             })
         })
@@ -99,7 +99,7 @@ class DBMPapelaria{
                 if (e){
                     reject(e.message)
                 } else {
-                    resolve(`id ${id} deletado com sucesso`)
+                    resolve(`Id ${id} deletado com sucesso!`)
                 }
             })
         })
