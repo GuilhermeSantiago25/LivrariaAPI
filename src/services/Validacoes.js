@@ -1,6 +1,6 @@
 class Validacoes{
-    
-    static validaNome(string){
+
+static validaNome(string){
         if(string.length >= 3){
             return true
         } else {
