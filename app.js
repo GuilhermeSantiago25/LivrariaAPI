@@ -1,6 +1,8 @@
 import express from "express";
 import * as dotenv from "dotenv";
 import cors from "cors";
+import https from "https";
+import fs from "fs";
 
 import Clientes from "./src/controllers/Clientes.js";
 import Informatica from "./src/controllers/Informatica.js";
@@ -19,6 +21,9 @@ const port = process.env.PORT || 3001
 
 app.use(cors())
 app.use(express.json())
+
+app.listen(port, ()=>{
+    console.log(`Sucesso na Conexão ao Servidor em: http://localhost:${port}`)
 
 DBMClientes.createTable();
 DBMInformatica.createTable();
