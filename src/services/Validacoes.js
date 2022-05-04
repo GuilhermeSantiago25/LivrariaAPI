@@ -1,9 +1,5 @@
 class Validacoes{
-    /**
-     * git 
-     * @param {string} string 
-     * @returns boolean
-     */
+    
     static validaNome(string){
         if(string.length >= 3){
             return true
@@ -18,7 +14,6 @@ class Validacoes{
             return false
         }
     }
-    
 }
 
 export default Validacoes;
