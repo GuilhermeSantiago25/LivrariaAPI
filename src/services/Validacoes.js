@@ -1,6 +1,6 @@
 class Validacoes{
     /**
-     * 
+     * git 
      * @param {string} string 
      * @returns boolean
      */
@@ -11,6 +11,14 @@ class Validacoes{
             return false
         }
     }
+    static validaValor(valor){
+        if(valor >= 0.1){
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }
 
 export default Validacoes;
