@@ -48,6 +48,14 @@ As dependências necessárias para o ambiente de desenvolvimento da aplicação 
 
 ## Inicialização da aplicação via terminal :arrow_forward:
 
+![terminal](https://user-images.githubusercontent.com/88124966/167010269-416955d4-b140-4e09-aa2a-162dda9bf074.png)
+
+## Comandos utilizando o Insomnia (*): arrow_forward:
+Neste repositório, há um arquivo chamado:  Insomnia_LivrariaAPI.yaml - no caminho: LivrariaAPI/src/utils - é necessário baixá-lo pra carregar as Request's para testar a criação, leitura, update e deleção de elementos da API.
+[clique aqui para acessar o arquivo](https://github.com/NiltonCortesJr/LivrariaAPI/blob/main/src/utils/Insomnia_LivrariaAPI.yaml) para acessá-lo e após salvar, abra o Insomnia, crie um novo Projeto, uma nova Collection, depois clique na Colletion criada e selecione: Import/Export - escolha o arquivo Insomnia_LivrariaAPI.yaml na pasta onde baixou o projeto e, siga as intruções do aplicativo para concluir o carregamento das Request's
+
+(*)Para que funcione as Request`s, é necessário instalar o aplicativo Insominia no computador local. Escolha a melhor maneira de instalá-lo de acordo com as instruções no site: [Insomnia](https://insomnia.rest)
+
 ## Autoria
 :woman_technologist: [Izadora Ferreira dos Santos](https://www.linkedin.com/in/izadora-ferreira-dos-santos-0504b2177/)
 
