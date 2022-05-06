@@ -14,13 +14,14 @@ As rotas a serem desenvolvidas para as entidades são:
 - Deleção de um registro
 
 ## Status do projeto :white_check_mark:
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge)
 
 ## Tecnologias utilizadas :computer:
 - NodeJS
-- Insominia
-- Postman
 - JavaScript
+- SQLite
+- Insominia
+- Heroku
 - Metodologia ágil Kanban (Trello)
 
 ## Dependências necessárias :page_with_curl:
@@ -47,6 +48,10 @@ As dependências necessárias para o ambiente de desenvolvimento da aplicação 
 ```
 
 ## Inicialização da aplicação via terminal :arrow_forward:
+Para iniciar a aplicação´, é necessário rodar no terminal o seguinte comando:
+```
+npm start
+```
 
 ![terminal](https://user-images.githubusercontent.com/88124966/167010269-416955d4-b140-4e09-aa2a-162dda9bf074.png)
 
