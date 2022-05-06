@@ -48,18 +48,94 @@ As dependências necessárias para o ambiente de desenvolvimento da aplicação 
 ```
 
 ## Inicialização da aplicação via terminal :arrow_forward:
-Para iniciar a aplicação´, é necessário rodar no terminal o seguinte comando:
+Para iniciar a aplicação, é necessário rodar no terminal o seguinte comando:
 ```
 npm start
 ```
+Ao rodar o comando, a mensagem abaixo deverá aparecer:
 
-![terminal](https://user-images.githubusercontent.com/88124966/167010269-416955d4-b140-4e09-aa2a-162dda9bf074.png)
+⚠️ **Atenção:
+A versão NodeJs utilizada para desenvolvimento é a 16.x LTS, 
+logo é necessário intalação de versão igual ou superior para a perfeita execução da mesma.**
 
-## Comandos utilizando o Insomnia (*) :arrow_forward:
-Neste repositório, há um arquivo chamado:  Insomnia_LivrariaAPI.yaml - no caminho: LivrariaAPI/src/utils - é necessário baixá-lo pra carregar as Request's para testar a criação, leitura, update e deleção de elementos da API.
-➡️[clique aqui para acessar o arquivo](https://github.com/NiltonCortesJr/LivrariaAPI/blob/main/src/utils/Insomnia_LivrariaAPI.yaml) para acessá-lo e após salvar, abra o Insomnia, crie um novo Projeto, uma nova Collection, depois clique na Colletion criada e selecione: Import/Export - escolha o arquivo Insomnia_LivrariaAPI.yaml na pasta onde baixou o projeto e, siga as intruções do aplicativo para concluir o carregamento das Request's
+![TerminalConectado](https://user-images.githubusercontent.com/88124966/167202571-16ace358-7623-46a2-870d-7af1f74248d9.png)
 
-(*)Para que funcione as Request`s, é necessário instalar o aplicativo Insominia no computador local. Escolha a melhor maneira de instalá-lo de acordo com as instruções no site: [Insomnia](https://insomnia.rest)
+
+
+## Rotas configuradas neste projeto :chart_with_upwards_trend:
+
+
+**Rotas da LivrariaAPI**
+
+Indicada por cada entidade:
+```
+"/Clientes"
+"/Informatica"
+"/Livros"
+"/Papelaria"
+```
+Para utilizar os verbos http em todas as rotas, utilize o Insominia, conforme o exemplo:
+
+![Insomnia](https://user-images.githubusercontent.com/88124966/167205915-9f18d290-b336-43e7-86fc-ff2279f7f5e6.png)
+
+▪️ Para listar todos os Livros, utilize o método GET no caminho: 
+``` "url da api/Livros" ```
+
+
+▪️ Para listar os Livros por Id , utilize o método GET no caminho: 
+``` "url da api/Livros/id" ```
+
+Neste exemplo o Id pesquisado será o 2:
+
+   ``` 
+   {
+     "id":2
+   } 
+   ```
+
+▪️ Para inserir Livros, utilize o método POST no caminho: 
+``` "url da api/Livros" ```
+
+```
+{
+  "id": 100, 
+  "nome":"Verity",
+  "autora":"Colleen Hoover",
+  "gênero": "romance",
+  "valor": 32.90
+}
+```
+
+▪️ Para atualizar Livros, utilize o método PUT no caminho: 
+``` "url da api/Livros/id" ```
+
+```
+{
+  "id": 100, 
+  "nome":"Novembro 9",
+  "autora":"Colleen Hoover",
+  "gênero": "romance",
+  "valor": 32.90
+}
+```
+
+▪️ Para deletar Livros por Id, utilize o método DEL no caminho: 
+``` "url da api/Livros/id" ```
+
+```
+{
+  "id": 100
+}
+```
+
+## Comandos utilizando o Insomnia (*) 
+
+(*)Para que funcione as Request's, é necessário instalar o aplicativo Insominia no computador local. Escolha a melhor maneira de instalá-lo de acordo com as instruções no site: [Insomnia](https://insomnia.rest)
+
+Para carregar as Request's no Insomnia, clique no botão abaixo, depois clique para abrir o Insomnia.aap e siga as instruções para carregar as request's.
+
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=LivrariaAPIMod4&uri=https%3A%2F%2Fraw.githubusercontent.com%2FNiltonCortesJr%2FLivrariaAPI%2Fmain%2Fsrc%2Futils%2FInsomnia_LivrariaAPI.json)
+
 
 ## Autoria
 :woman_technologist: [Izadora Ferreira dos Santos](https://www.linkedin.com/in/izadora-ferreira-dos-santos-0504b2177/)
