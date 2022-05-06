@@ -24,8 +24,18 @@ As rotas a serem desenvolvidas para as entidades são:
 - Heroku
 - Metodologia ágil Kanban (Trello)
 
+## Clonando o repositório
+⚠️ Efetue o Clone do Projeto Livraria no [repositório](https://github.com/NiltonCortesJr/LivrariaAPI):
+
+Rodar no terminal o seguinte comando: ``` git clone https://github.com/NiltonCortesJr/LivrariaAPI.git ```
+
+
 ## Dependências necessárias :page_with_curl:
  As dependências para a execução da aplicação estão listadas [aqui](https://github.com/NiltonCortesJr/LivrariaAPI/blob/main/package.json)
+ 
+ Para instalação, é necessário rodar no terminal o seguinte comando para cada: ``` npm install nomeDaDependencia ```
+ 
+ 
 ```
 "dependencies": {
     "axios": "^0.26.1",
@@ -55,15 +65,12 @@ npm start
 Ao rodar o comando, a mensagem abaixo deverá aparecer:
 
 ⚠️ **Atenção:
-A versão NodeJs utilizada para desenvolvimento é a 16.x LTS, 
-logo é necessário intalação de versão igual ou superior para a perfeita execução da mesma.**
+A versão NodeJs utilizada para desenvolvimento é a 16.x LTS ou superior.**
 
 ![TerminalConectado](https://user-images.githubusercontent.com/88124966/167202571-16ace358-7623-46a2-870d-7af1f74248d9.png)
 
 
-
 ## Rotas configuradas neste projeto :chart_with_upwards_trend:
-
 
 **Rotas da LivrariaAPI**
 
@@ -74,6 +81,7 @@ Indicada por cada entidade:
 "/Livros"
 "/Papelaria"
 ```
+
 Para utilizar os verbos http em todas as rotas, utilize o Insominia, conforme o exemplo:
 
 ![Insomnia](https://user-images.githubusercontent.com/88124966/167205915-9f18d290-b336-43e7-86fc-ff2279f7f5e6.png)
@@ -136,6 +144,8 @@ Para carregar as Request's no Insomnia, clique no botão abaixo, depois clique p
 
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=LivrariaAPIMod4&uri=https%3A%2F%2Fraw.githubusercontent.com%2FNiltonCortesJr%2FLivrariaAPI%2Fmain%2Fsrc%2Futils%2FInsomnia_LivrariaAPI.json)
 
+## DEPLOY da aplicação
+Para visualização do deploy, insira o caminho seguido da entidade escolhida ex: ``` https://livraria-api-modulo4.herokuapp.com/Livros ```
 
 ## Autoria
 :woman_technologist: [Izadora Ferreira dos Santos](https://www.linkedin.com/in/izadora-ferreira-dos-santos-0504b2177/)
