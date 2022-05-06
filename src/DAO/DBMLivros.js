@@ -7,7 +7,7 @@ class DBMLivros{
             if(e){
                 console.log(e)
             } else {
-                console.log("Chaves estrangeiras Livros, ativas.")
+                console.log("Chaves estrangeiras Livros configuradas.")
             }
         })
     }
