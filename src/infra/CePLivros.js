@@ -1,4 +1,4 @@
-import DBMLivros from "../DAO/DBMLivros.js";
+import {DBMLivros} from "../DAO/DBMLivros.js";
 
 try {
     const table = await DBMLivros.createTable()
