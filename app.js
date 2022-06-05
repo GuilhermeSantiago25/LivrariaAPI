@@ -5,7 +5,7 @@ import cors from "cors";
 import Clientes from "./src/controllers/Clientes.js";
 import Informatica from "./src/controllers/Informatica.js";
 import Livros from "./src/controllers/Livros.js";
-import Papelaria from "./src/controllers/Papelaria.js";
+//import Papelaria from "./src/controllers/Papelaria.js";
 
 import DBMClientes from "./src/DAO/DBMClientes.js";
 import DBMInformatica from "./src/DAO/DBMInformatica.js";
@@ -27,9 +27,9 @@ app.listen(port, ()=>{
 DBMClientes.createTable();
 DBMInformatica.createTable();
 DBMLivros.createTable();
-DBMPapelaria.createTable();
+//DBMPapelaria.createTable();
 
 Clientes.routers(app);
 Informatica.routers(app);
 Livros.routers(app);
-Papelaria.routers(app);
+//Papelaria.routers(app);
