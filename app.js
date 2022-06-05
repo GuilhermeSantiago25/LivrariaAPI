@@ -27,9 +27,9 @@ app.listen(port, ()=>{
 DBMClientes.createTable();
 DBMInformatica.createTable();
 DBMLivros.createTable();
-//DBMPapelaria.createTable();
+DBMPapelaria.createTable();
 
 Clientes.routers(app);
 Informatica.routers(app);
 Livros.routers(app);
-//Papelaria.routers(app);
+Papelaria.routers(app);
