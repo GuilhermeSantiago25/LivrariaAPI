@@ -4,15 +4,15 @@ import Validacoes from "../services/Validacoes.js"
 
 class Papelaria{
     static routers(app){
-        app.get("/Papelaria", async (req, res) =>{
+        app.get("/papelaria", async (req, res) =>{
             const response = await DBMPapelaria.listarTodos()
             res.status(200).json(response)
         })
-        app.get("/Papelaria/:id", async (req, res) =>{
+        app.get("/papelaria/:id", async (req, res) =>{
             const selectOne = await DBMPapelaria.listaPorId(req.body.id)
             res.status(200).json(selectOne)
         })
-        app.post("/Papelaria", async(req, res) => {
+        app.post("/papelaria", async(req, res) => {
             try {                
                 if(Validacoes.validaNome(req.body.produto) && Validacoes.validaValor(req.body.valor)){
                         const item = new PapelariaModel(...Object.values(req.body))
@@ -26,7 +26,7 @@ class Papelaria{
             }
         })
         
-        app.put('/Papelaria/:id', async(req, res) => {
+        app.put('/papelaria/:id', async(req, res) => {
             try {                
                 if(Validacoes.validaNome(req.body.produto) && Validacoes.validaValor(req.body.valor)){
                     const updatePapelaria = await DBMPapelaria.atualizaPorId(req.body, req.body.id)
@@ -39,7 +39,7 @@ class Papelaria{
             }
         });
 
-        app.delete('/Papelaria/:id', async (req, res) => {
+        app.delete('/papelaria/:id', async (req, res) => {
             let deleteUma = await DBMPapelaria.deletaPorId(req.body.id)
             res.status(200).json(deleteUma)
         })

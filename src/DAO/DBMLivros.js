@@ -21,7 +21,9 @@ class DBMLivros{
             titulo VARCHAR,
             autor VARCHAR,
             genero VARCHAR,
-            valor FLOAT
+            valor FLOAT,
+            descricao VARCHAR,
+            url VARCHAR
         )
         `
         
@@ -42,7 +44,7 @@ class DBMLivros{
      * @returns Promise<Object>
      */
     static popular (livro) {
-        const query = `INSERT INTO livros VALUES (?, ?, ?, ?, ?)`
+        const query = `INSERT INTO livros VALUES (?, ?, ?, ?, ?, ?, ?)`
         const body = Object.values(livro)
         return new Promise((resolve, reject) => {
             Database.run(query, [...body], (e) => {

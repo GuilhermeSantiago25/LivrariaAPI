@@ -5,17 +5,17 @@ import Validacoes from "../services/Validacoes.js"
 class Livros{
     static routers(app){
         
-        app.get("/Livros", async (req, res) =>{
+        app.get("/livros", async (req, res) =>{
             const response = await DBMLivros.listarTodos()
             res.status(200).json(response)
         })
 
-        app.get("/Livros/:id", async (req, res) =>{
+        app.get("/livros/:id", async (req, res) =>{
             const response = await DBMLivros.listaPorId(req.body.id)
             res.status(200).json(response)
         })
 
-        app.put('/Livros/:id', async(req, res) => {
+        app.put('/livros/:id', async(req, res) => {
             try {                
                 if(Validacoes.validaNome(req.body.nome) && Validacoes.validaValor(req.body.valor)){
                     const atualizarLivro = await DBMLivros.atualizaPorId(req.body, req.body.id)
@@ -28,7 +28,7 @@ class Livros{
             }
         });
 
-        app.post("/Livros", async(req, res) => {
+        app.post("/livros", async(req, res) => {
             try {                
                 if(Validacoes.validaNome(req.body.nome)&& Validacoes.validaValor(req.body.valor))  {
                     const inserirLivro = new LivrosModel(...Object.values(req.body))
@@ -42,7 +42,7 @@ class Livros{
             }
         });
 
-        app.delete('/Livros/:id', async(req, res) => {               
+        app.delete('/livros/:id', async(req, res) => {               
                     const deletarLivro = await DBMLivros.deletaPorId(req.body.id)
                     res.status(201).json(deletarLivro)
         });
