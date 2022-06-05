@@ -7,10 +7,7 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "start": "node --es-module-specifier-resolution=node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NiltonCortesJr/LivrariaAPI.git"
-  },
+  
   "keywords": [
     "Projeto final de módulo 4",
     "Resilia Educação"
