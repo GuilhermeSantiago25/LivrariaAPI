@@ -1,6 +1,6 @@
 import Database from "../infra/Database.js"
 
-class DBMInformatica{
+export class DBMInformatica{
     static activePragma(){
         const pragma = "PRAGMA foreing_keys = ON"
         Database.run(pragma, (e) => {
@@ -102,4 +102,3 @@ class DBMInformatica{
     }
 }
 
-export default DBMInformatica

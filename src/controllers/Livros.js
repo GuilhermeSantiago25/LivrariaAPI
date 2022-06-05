@@ -1,8 +1,8 @@
-import DBMLivros from "../DAO/DBMLivros.js"
+import { DBMLivros } from "../DAO/DBMLivros.js"
 import LivrosModel from "../models/LivrosModel.js"
 import Validacoes from "../services/Validacoes.js"
 
-class Livros{
+export class Livros{
     static routers(app){
         
         app.get("/livros", async (req, res) =>{
@@ -49,4 +49,3 @@ class Livros{
     }
 }
 
-export default Livros

@@ -1,8 +1,8 @@
-import DBMInformatica from "../DAO/DBMInformatica.js"
+import { DBMInformatica } from "../DAO/DBMInformatica.js"
 import InformaticaModels from "../models/InformaticaModels.js"
 import Validacoes from "../services/Validacoes.js"
 
-class Informatica{
+export class Informatica{
     static routers(app){
         
         app.get("/informatica", async (req, res) =>{
@@ -45,4 +45,3 @@ class Informatica{
     }
 }
 
-export default Informatica

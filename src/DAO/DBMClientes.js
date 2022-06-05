@@ -1,6 +1,6 @@
 import Database from "../infra/Database.js"
 
-class DBMClientes{
+export class DBMClientes{
     static activePragma(){
         const pragma = "PRAGMA foreing_keys = ON"
         Database.run(pragma, (e) => {
@@ -114,4 +114,3 @@ class DBMClientes{
     }
 }
 
-export default DBMClientes
