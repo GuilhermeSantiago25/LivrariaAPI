@@ -1,6 +1,6 @@
 import Database from "../infra/Database.js"
 
-class DBMPapelaria{
+export class DBMPapelaria{
     static activePragma(){
         const pragma = "PRAGMA foreing_keys = ON"
         Database.run(pragma, (e) => {
@@ -106,4 +106,3 @@ class DBMPapelaria{
     }
 }
 
-export default DBMPapelaria

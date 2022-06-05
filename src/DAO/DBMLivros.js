@@ -1,6 +1,6 @@
 import Database from "../infra/Database.js"
 
-class DBMLivros{
+export class DBMLivros{
     static activePragma(){
         const pragma = "PRAGMA foreing_keys = ON"
         Database.run(pragma, (e) => {
@@ -108,4 +108,3 @@ class DBMLivros{
     }
 }
 
-export default DBMLivros
