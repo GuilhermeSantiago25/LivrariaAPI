@@ -5,7 +5,7 @@ import cors from "cors";
 import Clientes from "./src/controllers/Clientes.js";
 import Informatica from "./src/controllers/Informatica.js";
 import Livros from "./src/controllers/Livros.js";
-import Papelaria from "./src/controllers/Papelaria.js";
+// import Papelaria from "./src/controllers/Papelaria.js";
 
 import DBMClientes from "./src/DAO/DBMClientes.js";
 import DBMInformatica from "./src/DAO/DBMInformatica.js";
