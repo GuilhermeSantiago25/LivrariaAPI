@@ -32,4 +32,4 @@ DBMPapelaria.createTable();
 Clientes.routers(app);
 Informatica.routers(app);
 Livros.routers(app);
-Papelaria.routers(app)
+Papelaria.routers(app);
