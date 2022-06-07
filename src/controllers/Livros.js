@@ -11,7 +11,8 @@ export class Livros{
         })
 
         app.get("/livros/:id", async (req, res) =>{
-            const response = await DBMLivros.listaPorId(req.body.id)
+            const {id} = req.params;
+            const response = await DBMLivros.listaPorId(id)
             res.status(200).json(response)
         })
 
@@ -42,8 +43,9 @@ export class Livros{
             }
         });
 
-        app.delete('/livros/:id', async(req, res) => {               
-                    const deletarLivro = await DBMLivros.deletaPorId(req.body.id)
+        app.delete('/livros/:id', async(req, res) => {
+                    const {id} = req.params;    
+                    const deletarLivro = await DBMLivros.deletaPorId(id)
                     res.status(201).json(deletarLivro)
         });
     }
