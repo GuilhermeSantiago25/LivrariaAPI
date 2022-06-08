@@ -17,9 +17,10 @@ export class Livros{
         })
 
         app.put('/livros/:id', async(req, res) => {
+            const {id} = req.params;
             try {                
                 if(Validacoes.validaNome(req.body.nome) && Validacoes.validaValor(req.body.valor)){
-                    const atualizarLivro = await DBMLivros.atualizaPorId(req.body, req.body.id)
+                    const atualizarLivro = await DBMLivros.atualizaPorId(req.body,id)
                     res.status(200).json(atualizarLivro);
                 }else {
                     throw new Error("Requisição fora dos padrões, favor rever.")
