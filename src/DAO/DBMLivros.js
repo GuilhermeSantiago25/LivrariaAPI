@@ -82,7 +82,7 @@ export class DBMLivros{
     }
     static atualizaPorId(livro, id){
         const query = `
-        UPDATE livros SET (url, titulo, autor, genero, valor) = (?,?,?,?,?) WHERE id = ?
+        UPDATE livros SET (url, titulo, autor, genero, valor, descricao) = (?,?,?,?,?,?) WHERE id = ?
         `
         return new Promise((resolve, reject) => {
             Database.run(query, [...Object.values(livro), id], (e, result) => {
